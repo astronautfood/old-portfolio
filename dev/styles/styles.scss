@@ -1,0 +1,169 @@
+body {
+	margin: 0;
+	background: url("../assets/background-image1.png");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	font-family: 'Pontano Sans', sans-serif;
+	font-weight: bold;
+	// background-position: fixed; 
+	// background-orign: inherit;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1180px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+header {
+	background: #FFA07A;
+	border-top: 10px solid #FA8072;
+	// border-bottom: 15px solid #DB9E36;
+	h1 {
+		margin: 0 0 0 130px;
+		padding: 20px;
+		color: #333;
+		letter-spacing: 2px;
+	}
+}
+
+.wrapper {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.add-plants {
+	width: 20%;
+	margin-right: auto;
+	background: #fff;
+	max-height: 570px;
+	position: relative;
+		// border: 1px solid #000;
+	background: #fff;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,.2), 0 4px 4px -4px rgba(0,0,0,.2), 0 2px 9px 0 rgba(0,0,0,.2);
+	  	// &::after {
+	  	// 	content: "";
+	  	// 	background: rgba(255,160,122, 0.2);
+	  	// 	position: absolute;
+	  	// 	top: 0;
+	  	// 	bottom: 0;
+	  	// 	left: 0;
+	  	// 	right: 0;
+	  	// 	z-index: 10;
+	  	// } 
+}
+
+.flex-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: space-between;
+}
+
+// label {
+// 	margin-right: 10px;
+// }
+
+input#cacti,
+input#succulent,
+input#house-plant,
+input#other-day,
+input#week,
+input#two-weeks,
+input#three-weeks,
+input#month {
+	margin: 0;
+	width: 10px;
+}
+
+.plant-cards {
+	width: 65%;
+	margin-left: 50px;
+}
+
+.plant-cards button {
+	margin-top: 20px;
+	margin-left: auto;
+	display: block;
+}
+
+.add-plants form {
+	width: 100%;
+	overflow: hidden;
+}
+
+.type,
+.dynamic-name,
+.water-tracker {
+	border: 1px solid #000;
+	padding: 15px;
+	.type__instruction,
+	.dynamic-name__instruction,
+	.water-tracker__instruction {
+		padding-bottom: 10px;
+	}
+}
+
+input {
+	width: 100%;
+	display: block;
+	z-index: 20;
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	width: calc(50% - 50px);
+	list-style-type: none;
+	margin-right: 50px;
+	margin-bottom: 30px;
+	padding: 20px;
+	position: relative;
+	// border: 1px solid #000;
+	background: #fff;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.2), 0 4px 4px -4px rgba(0,0,0,.2), 0 2px 9px 0 rgba(0,0,0,.2);
+  	// &::after {
+  	// 	content: "";
+  	// 	background: rgba(255,160,122, 0.2);
+  	// 	position: absolute;
+  	// 	top: 0;
+  	// 	bottom: 0;
+  	// 	left: 0;
+  	// 	right: 0;
+  	// 	z-index: 10;
+  	// } 
+}
+
+input[type=submit] {
+	border-radius: 2px;
+	min-width: 88px;
+	cursor: pointer;
+	border: 0;
+	min-width: 120px;
+	background-color: #FA8072;
+	color: #fff;
+	font-size: 14px;
+	padding: 15px 6px;
+	z-index: 30;
+}
+
+button {
+  border-radius: 2px;
+  min-width: 88px;
+  background-color: #FA8072;
+  cursor: pointer;
+  border: 0;
+  min-width: 120px;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,.3);
+  padding: 10px 6px;
+  z-index: 20;
+}
