@@ -5,13 +5,34 @@ import moment from 'moment';
 
 const dbRef = firebase.database().ref('/items');
 
-const dateMap = {
-	"every other day": 8640000000,
-	"week": 604800000000,
-	"two weeks": 121000000000,
-	"three weeks": 1814000000000,
-	"every month": 7884000000000,
-}
+// const dateMap = {
+// 	"every other day": 8640000000,
+// 	"week": 604800000000,
+// 	"two weeks": 121000000000,
+// 	"three weeks": 1814000000000,
+// 	"every month": 7884000000000,
+// }
+
+function getWaterDate(time) {
+	if (time === "every month") {
+		return 30
+
+	} 
+	else if (time === "every three weeks") {
+		return 21
+
+	} 
+	else if (time === "every two weeks") {
+		return 14 
+
+	} 
+	else if (time === "every week") {
+	 	return 7
+	}
+	else {
+		return 2
+	}
+};
 
 class Form extends React.Component {
 	render() {
@@ -19,7 +40,7 @@ class Form extends React.Component {
 			<section className="add-plants">	
 				<form onSubmit={this.props.handleSubmit}>
 					<div className="type">
-						<div className="type__instruction">Select your Plant Type</div>
+						<div className="instruction">Select Plant Type</div>
 						<div className="flex-container">
 							<label htmlFor="cacti">Cactus</label> 
 							<input type="radio" name="plantType" id="cacti" value="Cactus" checked={this.props.selectedOption === 'Cactus'} onChange={this.props.handleChange}/>
@@ -34,13 +55,13 @@ class Form extends React.Component {
 						</div>	
 					</div>
 					<div className="dynamic-name">
-						<div className="dynamic-name__instruction">What do you call it?</div>
+						<div className="instruction">What's it's name?</div>
 						<label htmlFor="plant-name">
-							<input type="text" className="plant-name" name="dynamicName" placeholder='Example: pothos, prayer plant, "Ben"' onChange={this.props.handleChangeText} value={this.props.dynamicName}/>
+							<input type="text" className="plant-name" name="dynamicName" placeholder='i.e. Pothos, Prayer Plant, "Ben"' onChange={this.props.handleChangeText} value={this.props.dynamicName}/>
 						</label>
 					</div>
 					<div className="water-tracker">
-						<div className="water-tracker__instruction">Select how often you water your plant</div>
+						<div className="instruction">How often does you plant need to be watered?</div>
 						<div className="flex-container">
 							<label htmlFor="other-day">Every Other Day</label> 
 							<input type="radio" name="waterTracker" id="other-day" value="every other day" checked={this.props.selectedTime === 'every other day'} onChange={this.props.handleOptionChange}/>
@@ -62,7 +83,10 @@ class Form extends React.Component {
 							<input type="radio" name="waterTracker" id="month" value="every month" checked={this.props.selectedTime === 'every month'} onChange={this.props.handleOptionChange}/>
 						</div>	
 					</div>
-					<input id="date" type="date" className="calendar" name="selectedDate" onChange={this.props.updateDate} value={this.props.selectedDate}/>
+					<div className="calendar">
+						<div className="instruction">When was the last time you watered your plant?</div>
+						<input id="date" type="date" name="selectedDate" onChange={this.props.updateDate} value={this.props.selectedDate}/>
+					</div>
 					<input type="submit" />
 				</form>
 			</section>
@@ -97,12 +121,8 @@ class App extends React.Component {
 	removeItem(key) {
 		const itemRef = firebase.database().ref(`/items/${key}`);
 		itemRef.remove();
-		// const items = Array.from(this.state.items);
-		// items.splice(index, 1);
-		// this.setState({
-		// 	items: items
-		// })
 	}
+
 	updateDate(e) {
 		const date = moment(e.target.value);
 
@@ -123,18 +143,7 @@ class App extends React.Component {
 		dbRef.push(newItem);
 	}
 
-	// handleInputChange(event) {
-	// 	const target = event.target;
-	// 	const value = target.type === 'checkbox' ? target.checked : target.value;
-	// 	const name = target.name;
-
-	// 	this.setState({
-	// 		[event.target.name]: event.target.value
-	// 	});
-	// }
-
 	handleChange(event) {
-		console.log('handlechange', event.target.value);
 		this.setState({
 			selectedOption: event.target.value
 		});
@@ -186,41 +195,38 @@ class App extends React.Component {
 		return (
 			<div className='app'>
 				<header>
-					<h1>H2Gr0</h1>
+					<img src="../dev/assets/h2growWhite.svg" />
 				</header>
 				<div className="container">
-					<Form 
-						handleChange={this.handleChange}
-						handleOptionChange={this.handleOptionChange}
-						handleChangeText={this.handleChangeText}
-						handleSubmit={this.handleSubmit}
-						updateDate={this.updateDate}
-						// plantType={this.state.plantType}
-						// nameInput={this.state.nameInput}
-						otherDay={this.state.otherDay}
-						selectedOption={this.state.selectedOption}
-						selectedTime={this.state.selectedTime}
-						dynamicName={this.state.dynamicName}
-					/>
+					<div className="formWrap">
+						<Form 
+							handleChange={this.handleChange}
+							handleOptionChange={this.handleOptionChange}
+							handleChangeText={this.handleChangeText}
+							handleSubmit={this.handleSubmit}
+							updateDate={this.updateDate}
+							otherDay={this.state.otherDay}
+							selectedOption={this.state.selectedOption}
+							selectedTime={this.state.selectedTime}
+							dynamicName={this.state.dynamicName}
+						/>
+					</div>
 					<section className="plant-cards">
 						<div className="wrapper">
-							<div className="plant-card__front"></div>
-							<div className="plant-card__back">
+							<div className="plant-card">
 								<ul>
 									{this.state.items.map((item, i) => {
 										const lastWatered = moment(item.dateSubmitted);
-										const thirtyDaysLater = lastWatered.add(30, 'days');
-										const whenToWater = moment().from(thirtyDaysLater);
-										// const dateSubmitted = moment().format('LLLL');
-
+										const waterTime = lastWatered.add(getWaterDate(item.water), 'days');
+										const whenToWater = moment().to(waterTime);
 										
-									  return (
+										 return (
 										<li key={i} >
-											<p>Plant type: {item.plant}</p>
-											<p>Name: {item.name}</p>
-											<p>Water me {item.water}</p>
-											<p>Water in {moment().from(item.dateSubmitted)}</p>
-											<p>Today is: {moment().format('LLLL')}</p>
+											<p className="today">{moment().format('LLLL')}</p>
+											<p className="plantType__user-input"><span>Plant Type:</span> {item.plant}</p>
+											<p className="name__user-input"><span>Name:</span> {item.name}</p>
+											<p className="water-me">Water me {item.water}</p>
+											<p className="display-when">Water me {whenToWater}<img src="./dev/assets/branch.png" /></p>
 											<button onClick={() => this.removeItem(item.id)}>Remove Item</button>
 										</li>
 										);
