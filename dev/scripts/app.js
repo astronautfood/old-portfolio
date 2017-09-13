@@ -5,13 +5,15 @@ import moment from 'moment';
 
 const dbRef = firebase.database().ref('/items');
 
-// const dateMap = {
-// 	"every other day": 8640000000,
-// 	"week": 604800000000,
-// 	"two weeks": 121000000000,
-// 	"three weeks": 1814000000000,
-// 	"every month": 7884000000000,
-// }
+let lastWatered = moment();
+
+
+
+const thirtyDaysLater = lastWatered.add(30, 'days');
+const threeWeeksLater = lastWatered.add(21, 'days');
+const twoWeeksLater = lastWatered.add(14, 'days');
+const oneWeekLater = lastWatered.add(7, 'days');
+const secondDay = lastWatered.add(2, 'days'); 
 
 function getWaterDate(time) {
 	if (time === "every month") {
@@ -216,10 +218,10 @@ class App extends React.Component {
 							<div className="plant-card">
 								<ul>
 									{this.state.items.map((item, i) => {
-										const lastWatered = moment(item.dateSubmitted);
+										let lastWatered = moment(item.dateSubmitted);
 										const waterTime = lastWatered.add(getWaterDate(item.water), 'days');
 										const whenToWater = moment().to(waterTime);
-										
+
 										 return (
 										<li key={i} >
 											<p className="today">{moment().format('LLLL')}</p>
