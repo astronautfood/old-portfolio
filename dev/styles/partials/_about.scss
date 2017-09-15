@@ -1,0 +1,15 @@
+.about-section h2 {
+	@include sectionHeading(30px);
+	padding: 90px 0 65px;
+	position: relative;
+	&::after {
+		@include keyline;
+	}
+}
+
+.about-section p {
+	@include body(16px);
+	padding-bottom: 110px;
+	width: 50%;
+
+}

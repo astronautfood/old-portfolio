@@ -1,0 +1,40 @@
+.projects h2 {
+	@include sectionHeading(30px);
+	padding: 90px 0 65px;
+	position: relative;
+	&::after {
+		@include keyline;
+	}
+}
+
+.project__wrapper--left {
+	display: flex;
+	align-items: flex-start;
+	.project__info {
+	// padding: 60px 0 50px 50px;
+	}
+}
+
+.project__info {
+	display: flex;
+	flex-direction: column;
+	p {
+		width: 40%;
+		// text-align: justify;
+	}
+}
+
+.project__info h3 {
+	padding: 0;
+	align: left;
+}
+
+.project__wrapper--right {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-end;
+	padding: 130px 0;
+	.project__info {
+	// padding: 60px 0 50px 0;
+	}
+}

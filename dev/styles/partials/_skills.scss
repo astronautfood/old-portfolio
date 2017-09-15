@@ -1,0 +1,38 @@
+.skills {
+	background: #000;
+	padding-top: 50px;
+}
+
+.skills__display {
+	display: flex;
+	flex-wrap: wrap;
+	// justify-content: space-between;
+	align-content: center;
+}
+
+.skills__display li {
+	width: 20%;
+	padding: 0 40px 60px 40px;
+	.devicon {
+		text-align: center;
+		color: $wh;
+		font-size: 80px;
+		text-align: center;
+		display: block;
+	}
+}
+
+.skills__display img {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.skills__display h4 {
+	width: 100%;
+	@include body(14px);
+	letter-spacing: 2px;
+	text-align: center;
+	color: $wh;
+	padding-top: 15px;
+}

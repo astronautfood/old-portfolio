@@ -1,0 +1,27 @@
+.header__img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+header {
+	padding-top: 35px;
+	display: flex;
+	justify-content: space-between;
+	background: #333;
+}
+
+.nav__items {
+	width: 400px;
+	display: flex;
+	justify-content: space-between;
+	@include body(16px);
+	 text-transform: uppercase;
+	a {
+		color: $wh;
+		letter-spacing: 2px;
+	}
+}
+
+
+
