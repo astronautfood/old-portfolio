@@ -1,0 +1,11 @@
+footer {
+	background: $bl;
+	padding: 75px 0;
+	p {
+		color: $wh;
+		@include sectionSubHeading(20px);
+		letter-spacing: 3px;
+		text-align: center;
+	}
+}
+

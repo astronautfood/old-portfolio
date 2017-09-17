@@ -1,40 +1,91 @@
-.projects h2 {
+.projects {
+	padding-bottom: 135px;
+}
+
+.projects__intro {
 	@include sectionHeading(30px);
-	padding: 90px 0 65px;
+	padding: 100px 0 65px;
 	position: relative;
 	&::after {
 		@include keyline;
+		top: 70%;
 	}
 }
 
-.project__wrapper--left {
+.project__container-left {
 	display: flex;
-	align-items: flex-start;
-	.project__info {
-	// padding: 60px 0 50px 50px;
+	.project__info--left {
+		width: 85%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding-left: 50px;
 	}
 }
 
-.project__info {
+.project__container-right {
+	display: flex;
+	padding-top: 130px;
+	flex-direction: row-reverse;
+	&:first-child {
+		padding-bottom: 130px;
+	}
+}
+
+.project__title {
+	font-family: $headingFont;
+}
+
+.project__img--left,
+.project__img--right {
+	width: 525px;
+	height: 275px;
+	border: 3px solid $bl;
+}
+
+.project__img--left {
+	box-shadow: -10px 10px $bl;
+}
+
+.project__img--right {
+	box-shadow: 10px 10px $bl;
+}
+
+// Photo by Samuel Zeller on Unsplash
+// Photo by Alex wong on Unsplash
+// Photo by William Bout on Unsplash
+
+// .project__img--left::before {
+// 	content: "";
+// 	width: 525px;
+// 	height: 275px;
+// 	// display: block;
+// 	position: absolute;
+// 	top: 20%;	
+// 	background: $bl;
+
+// }
+
+.project__info--right {
 	display: flex;
 	flex-direction: column;
-	p {
-		width: 40%;
-		// text-align: justify;
-	}
+	justify-content: space-around;
+	padding-right: 50px;
 }
 
-.project__info h3 {
-	padding: 0;
-	align: left;
+.project__description {
+	line-height: 30px;
 }
 
-.project__wrapper--right {
+.project__languages {
 	display: flex;
-	flex-direction: row-reverse;
-	align-items: flex-end;
-	padding: 130px 0;
-	.project__info {
-	// padding: 60px 0 50px 0;
+	justify-content: space-between;
+	span{
+		font-size: 14px;
+		display: block;
+		padding: 10px;
+		background: $bl;
+		color: $wh;
 	}
 }
+

@@ -1,4 +1,4 @@
-.about-section h2 {
+.about__title {
 	@include sectionHeading(30px);
 	padding: 90px 0 65px;
 	position: relative;
@@ -7,7 +7,7 @@
 	}
 }
 
-.about-section p {
+.about__description {
 	@include body(16px);
 	padding-bottom: 110px;
 	width: 50%;

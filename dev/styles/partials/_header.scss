@@ -1,21 +1,44 @@
-.header__img {
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+.header__branding--name {
+	color: $wh;
+	@include body(20px);
+	letter-spacing: 2px;
+	padding-top: 15px;
+	height: 30px;
+	position: relative;
+}
+
+.header__branding--name::after {
+	content: "";
+	width: 45px;
+	height: 35px;
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: -25%;
+	// transform: tranlateX(50%);
+	border-top: 1px solid $wh;
+	border-left: 1px solid $wh;
+	border-bottom: 1px solid #666;
+	border-right: 1px solid #666;
 }
 
 header {
-	padding-top: 35px;
+	padding: 5px;
+	background: $bl;
+	border-bottom: 1.5px solid $wh;
+	box-shadow: 1px 0px 2px #333;
+}
+
+.header__wrapper {
 	display: flex;
 	justify-content: space-between;
-	background: #333;
 }
 
 .nav__items {
 	width: 400px;
 	display: flex;
 	justify-content: space-between;
-	@include body(16px);
+	@include body(14px);
 	 text-transform: uppercase;
 	a {
 		color: $wh;

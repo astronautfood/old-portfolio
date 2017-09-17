@@ -13,9 +13,10 @@
 	=                   Header             =
 	======================================-->
 	<section class="hero-section">
+	<header>
 		<div class="wrapper">
-			<header>
-				<img src="https://unsplash.it/50/50" alt="" class="header__img">
+			<div class="header__wrapper">
+				<div class="header__branding--name">DM</div>
 				<nav>
 					<ul class="nav__items">
 						<li><a href="#home">Home</a></li>
@@ -24,16 +25,18 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
-			</header>
+			</div>
+		</div>	
+	</header>
 		<!--==================================
 		=            Hero Section            =
 		===================================-->
-		
+		<div class="wrapper">
 			<div class="hero__title">
-				<h1>Dana Manoli</h1>
-				<h3>Web Developer</h3>
+				<h1 class="hero__title--name">Dana Manoli</h1>
+				<h3 class="hero__title--career">Web Developer</h3>
 			</div>
-		</div>
+		</div>			
 	</section class="hero-section">
 	<!--====  End of Section comment  ====-->
 
@@ -42,8 +45,8 @@
 	====================================-->
 	<section class="about-section">
 		<div class="wrapper">
-			<h2>About Me</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a harum veniam cupiditate mollitia eaque, natus, earum nostrum, voluptatum repudiandae ratione quibusdam autem delectus nulla repellendus commodi est dicta in, nihil fuga rerum? Optio dolorem omnis porro debitis nobis consectetur ducimus doloribus adipisci natus error, reprehenderit laudantium, ratione molestiae! Id sit nam, quaerat blanditiis saepe voluptatem enim odio assumenda eos tenetur hic repudiandae beatae modi eius dolores quidem asperiores laborum incidunt quas soluta rem dolorum, esse. Repudiandae amet illo rem, aut beatae iusto. Nulla facilis libero vel, nemo perspiciatis, inventore voluptates totam beatae quo recusandae harum? Quam, at, perferendis! Qui.</p>
+			<h2 class="about__title">About Me</h2>
+			<p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a harum veniam cupiditate mollitia eaque, natus, earum nostrum, voluptatum repudiandae ratione quibusdam autem delectus nulla repellendus commodi est dicta in, nihil fuga rerum? Optio dolorem omnis porro debitis nobis consectetur ducimus doloribus adipisci natus error, reprehenderit laudantium, ratione molestiae! Id sit nam, quaerat blanditiis saepe voluptatem enim odio assumenda eos tenetur hic repudiandae beatae modi eius dolores quidem asperiores laborum incidunt quas soluta rem dolorum, esse. Repudiandae amet illo rem, aut beatae iusto. Nulla facilis libero vel, nemo perspiciatis, inventore voluptates totam beatae quo recusandae harum? Quam, at, perferendis! Qui.</p>
 		</div>
 	</section>
 	<!--====  End of About Section  ====-->
@@ -107,42 +110,59 @@
 			<h2 class="projects__intro">Projects</h2>
 			<ul class="projects__display">
 				<li>
-					<div class="project__wrapper--left">
-						<img src="https://unsplash.it/525/430" alt="">
-						<div class="project__info">
-							<h3>Project</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur tempora vel blanditiis itaque in voluptatibus saepe quos eaque quae, veritatis, quidem aliquid ipsa aut quod omnis? Hic a optio magnam eligendi dolorum enim architecto consequuntur. Quod corporis, consequatur distinctio eveniet!</p>
-							<h4><a href="#">View Live</a></h4>
+					<div class="project__container-left">
+						<img src="dev/assets/Breakfast247-APIProject.png" alt="" class="project__img--left">
+						<div class="project__info--left">
+							<h2 class="project__title">Breakfast 24/ 7</h2>
+							<h4 class="project__sub-title">API Web Application</h4>
+							<p class="project__description">Powered by Zomato's API and Leaflet, this web application is designed to show users where they can get Breakfast at any time of day.</p>
+							<p class="project__languages"><span>Javascript</span><span>Jquery</span><span>HTML5</span><span>CSS3</span><span>SASS</span><span>Responsive</span></p>
+							<h4 class="project__link"><a href="#">View Live</a></h4>
 						</div>
 					</div>
 				</li>
 				<li>	
-					<div class="project__wrapper--right">
-						<img src="https://unsplash.it/525/430" alt="">
-						<div class="project__info">
-							<h3>Project</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus praesentium non, ex est omnis quos rerum, iste id atque repellat illum facilis cum illo reprehenderit libero tempora mollitia officiis tenetur amet dolor! Aut, neque, sunt.</p>
-							<h4><a href="#"></a>View Live</h4>
+					<div class="project__container-right">
+						<img src="dev/assets/Topify-GroupAPIProject.png" alt="" class="project__img--right">
+						<div class="project__info--right">
+							<h2 class="project__title">Topify</h2>
+							<h4 class="project__sub-title">API Web Application</h4>
+							<p class="project__description">A web application using the Spotify API. Built as a 'Netflix' style catalogue that dynamically displays today's top 50 tracks.</p>
+							<p class="project__languages"><span>Javascript</span><span>Jquery</span><span>HTML5</span><span>CSS3</span><span>SASS</span><span>Responsive</span></p>
+							<h4 class="project__link"><a href="#"></a>View Live</h4>
 						</div>
 					</div>
 				</li>
 				<li>	
-					<div class="project__wrapper--left">
-						<img src="https://unsplash.it/525/430" alt="">
-						<div class="project__info">
-							<h3>Project</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptates obcaecati ipsam nostrum tempore debitis, harum enim nisi laboriosam quaerat quasi unde voluptatum, saepe!</p>
-							<h4><a href="#">View Live</a></h4>
+					<div class="project__container-left">
+						<img src="dev/assets/H2Grow-ReactProject.png" alt="" class="project__img--left">
+						<div class="project__info--left">
+							<h2 class="project__title">Project</h2>
+							<p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptates obcaecati ipsam nostrum tempore debitis, harum enim nisi laboriosam quaerat quasi unde voluptatum, saepe!</p>
+							<p class="project__languages"><span>React</span><span>HTML5</span><span>CSS3</span><span>SASS</span><span>Responsive</span></p>
+							<h4 class="project__link"><a href="#">View Live</a></h4>
 						</div>
 					</div>
 				</li>
 				<li>	
-					<div class="project__wrapper--right">
-						<img src="https://unsplash.it/525/430" alt="">
-						<div class="project__info">
-							<h3>Project</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, doloribus, dolore. Vero est fuga ex at?</p>
-							<h4><a href="#">View Live</a></h4>
+					<div class="project__container-right">
+						<img src="dev/assets/Quiz-JSProject.png" alt="" class="project__img--right">
+						<div class="project__info--right">
+							<h2 class="project__title">Project</h2>
+							<p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, doloribus, dolore. Vero est fuga ex at?</p>
+							<p class="project__languages"><span>Javascript</span><span>Jquery</span><span>HTML5</span><span>CSS3</span><span>SASS</span><span>Responsive</span></p>
+							<h4 class="project__link"><a href="#">View Live</a></h4>
+						</div>
+					</div>
+				</li>
+				<li>	
+					<div class="project__container-left">
+						<img src="dev/assets/Elrumi-HTML-CSSProject.png" alt="" class="project__img--left">
+						<div class="project__info--left">
+							<h2 class="project__title">Project</h2>
+							<p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptates obcaecati ipsam nostrum tempore debitis, harum enim nisi laboriosam quaerat quasi unde voluptatum, saepe!</p>
+							<p class="project__languages"><span>HTML5</span><span>CSS3</span><span>SASS</span><span>Responsive</span></p>
+							<h4 class="project__link"><a href="#">View Live</a></h4>
 						</div>
 					</div>
 				</li>
@@ -154,26 +174,31 @@
 	<!--==================================
 	=            Form Section            =
 	===================================-->
-	<section class="form">
+	<section class="contact">
 		<div class="wrapper">
-			<h2 class="form__intro">Contact Me!</h2>
+			<h2 class="form__intro">Get in Touch</h2>
 			
-			<aside>
-				<h3>Let's Work Together!</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam necessitatibus eius esse nam repudiandae earum autem, eveniet sed culpa suscipit commodi ipsam dolorem architecto similique repellat tenetur officia. Amet deserunt rerum qui dolorem nam aliquid dignissimos delectus, vitae eveniet incidunt.</p>
-				<h4>My Email</h4>
-				<figure role="social-icons">
-					<img src="" alt="">
-					<img src="" alt="">
-					<img src="" alt="">
-				</figure>
-			</aside>
-			<label for="userName"></label>
-			<input type="text" name="userName" placeholder="Name" required="true">
-			<input type="email" name="userEmail" placeholder="Email" required="true">
-			<input type="text" name="subject" placeholder="Subject" required="false">
-			<input type="textarea" name="message" placeholder="Message" required="true">
-			<button>Send Message</button>
+			<div class="contact__container">
+				<div class="contact__container--left">
+					<h3 class="contact__title">Let's Work Together!</h3>
+					<p class="contact__about--short">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam necessitatibus eius esse nam repudiandae earum autem, eveniet sed culpa suscipit commodi ipsam dolorem architecto similique repellat tenetur officia.</p>
+					<h4 class="my-email">dmanoli1@gmail.com</h4>
+					<figure role="social-icons">
+						<img src="" alt="">
+						<img src="" alt="">
+						<img src="" alt="">
+					</figure>
+				</div>
+				<div class="form__container">
+					<div class="form__inner-container">
+						<input type="text" name="userName" placeholder="Name" class="name" required="true">
+						<input type="email" name="userEmail" placeholder="Email" class="email" required="true">
+					</div>
+					<input type="text" name="subject" placeholder="Subject" class="subject" required="false">
+					<textarea cols="40" rows="8" name="message" placeholder="Message" class="message" required="true"></textarea>
+					<button class="form__message-button">Send Message</button>
+				</div>
+			</div>
 		</div>
 	</section>
 	<!--====  End of Form Section  ====-->
@@ -184,6 +209,11 @@
 	<footer>
 		<div class="wrapper">
 			<p> &copy; Dana Manoli 2017</p>
+			<figure role="social-icons">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</figure>
 		</div>
 	</footer>
 

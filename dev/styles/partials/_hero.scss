@@ -1,5 +1,5 @@
 .hero-section {
-	background: #333;
+	background: url(/dev/assets/samuel-zeller-337030.jpg);
 	height: 100vh;
 	position: relative;
 }
@@ -7,21 +7,22 @@
 .hero__title {
 	width: 600px;
 	text-align: center;
-	color: $wh;
+	color: $bl;
 	text-transform: uppercase;
-	border: 3px solid $wh;
+	background: #F4F5F7;
+	border: 3px solid $bl;
 	padding: 5px;
 	position: absolute;
 	top:50%;
 	left: 50%;
 	transform:translate(-50%, -50%);
 
-	h1 {
+.hero__title--name {
 		@include sectionHeading(60px);
 		letter-spacing: 5px;
 	}
 
-	h3 {
+.hero__title--career {
 		@include body(25px);
 		letter-spacing: 4px;
 		text-align: center;
