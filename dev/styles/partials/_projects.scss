@@ -34,6 +34,19 @@
 
 .project__title {
 	font-family: $headingFont;
+	border: 3px solid $bl;
+	width: 250px;
+	padding: 15px;
+	text-align: center; 
+	box-shadow: -5px -5px $bl;
+}
+
+.project__title.right { 
+	box-shadow: 5px -5px $bl;
+}
+
+.project__sub-title {
+	// margin: 10px 0;
 }
 
 .project__img--left,
@@ -44,11 +57,15 @@
 }
 
 .project__img--left {
-	box-shadow: -10px 10px $bl;
+	box-shadow: -15px -15px $bl;
 }
 
 .project__img--right {
-	box-shadow: 10px 10px $bl;
+	box-shadow: 15px -15px $bl;
+}
+
+.project__img--right.white {
+	border: 2px solid #333;
 }
 
 // Photo by Samuel Zeller on Unsplash
@@ -66,26 +83,45 @@
 
 // }
 
+.project__info--left {
+	// height: 400px;
+}
+
 .project__info--right {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	padding-right: 50px;
+	// height: 300px;
 }
 
 .project__description {
-	line-height: 30px;
+	line-height: 24px;
+	// margin-bottom: 10px;
 }
 
 .project__languages {
 	display: flex;
 	justify-content: space-between;
-	span{
-		font-size: 14px;
-		display: block;
-		padding: 10px;
-		background: $bl;
-		color: $wh;
+	background: $bl;
+	color: $wh;
+	padding: 10px 15px;
+	li {
+		// letter-spacing: 1.1px;
 	}
 }
+
+ul.last {
+	width: 300px;
+}
+
+.project__link {
+	border: 3px solid $bl;
+	padding: 10px 0;
+	width: 125px;
+	text-align: center;
+	// margin: 15px 0;
+}
+
+
 

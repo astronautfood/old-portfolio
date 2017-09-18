@@ -27,6 +27,8 @@ header {
 	background: $bl;
 	border-bottom: 1.5px solid $wh;
 	box-shadow: 1px 0px 2px #333;
+	position: relative;
+	z-index: 20;
 }
 
 .header__wrapper {

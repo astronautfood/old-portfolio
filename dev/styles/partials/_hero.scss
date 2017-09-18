@@ -1,7 +1,19 @@
 .hero-section {
 	background: url(/dev/assets/samuel-zeller-337030.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	// background-position-x: center;
 	height: 100vh;
 	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		background: rgba(10, 10, 10, 0.6);
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
 }
 
 .hero__title {
@@ -12,6 +24,7 @@
 	background: #F4F5F7;
 	border: 3px solid $bl;
 	padding: 5px;
+	z-index: 10;
 	position: absolute;
 	top:50%;
 	left: 50%;
