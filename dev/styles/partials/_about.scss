@@ -1,5 +1,22 @@
+.about__container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 80px 0 90px;
+	@include respond_to(medium) {
+		flex-direction: column-reverse;
+	}
+}
+
+.about__inner-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
 .about__title {
-	@include sectionHeading(30px);
+	@include sectionHeading(28px);
+	text-transform: uppercase;
 	padding: 90px 0 65px;
 	position: relative;
 	&::after {
@@ -9,7 +26,33 @@
 
 .about__description {
 	@include body(16px);
-	padding-bottom: 110px;
-	width: 50%;
+	padding-bottom: 20px;
+	width: 70%;
+}
 
+.about__social {
+	width: 120px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	padding-bottom: 110px;
+}
+
+.fa {
+	margin: 10px;
+	border: 3px solid $bl;
+	padding: 8px 10px;
+	border-radius: 50%;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.about__my-picture {
+	height: 350px;
+	margin-right: 100px;
+	border: 3px solid $bl;
+	box-shadow: 20px 20px $bl;
+	// position: absolute;
+	// t: 50%;
 }

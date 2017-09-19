@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/public/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:300|Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<script src="https://use.fontawesome.com/3f4aa47acc.js"></script>
 </head>
 <body>
 	<!--=====================================
@@ -18,10 +19,16 @@
 			<div class="header__wrapper">
 				<div class="header__branding--name">DM</div>
 				<nav>
+					<button class="hamburger hamburger--collapse is-active" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
 					<ul class="nav__items">
 						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
 						<li><a href="#skills">Skills</a></li>
-						<li><a href="#resume">Projects</a></li>
+						<li><a href="#projects">Projects</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -43,10 +50,20 @@
 	<!--===================================
 	=            About Section            =
 	====================================-->
-	<section class="about-section">
+	<section class="about-section" id="about">
 		<div class="wrapper">
-			<h2 class="about__title">About Me</h2>
-			<p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a harum veniam cupiditate mollitia eaque, natus, earum nostrum, voluptatum repudiandae ratione quibusdam autem delectus nulla repellendus commodi est dicta in, nihil fuga rerum? Optio dolorem omnis porro debitis nobis consectetur ducimus doloribus adipisci natus error, reprehenderit laudantium, ratione molestiae! Id sit nam, quaerat blanditiis saepe voluptatem enim odio assumenda eos tenetur hic repudiandae beatae modi eius dolores quidem asperiores laborum incidunt quas soluta rem dolorum, esse. Repudiandae amet illo rem, aut beatae iusto. Nulla facilis libero vel, nemo perspiciatis, inventore voluptates totam beatae quo recusandae harum? Quam, at, perferendis! Qui.</p>
+			<div class="about__container">
+				<div class="about__inner-container">
+					<h2 class="about__title">About Me</h2>
+					<p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a harum veniam cupiditate mollitia eaque, natus, earum nostrum, voluptatum repudiandae ratione quibusdam autem delectus nulla repellendus commodi est dicta in, nihil fuga rerum? Optio dolorem omnis porro debitis nobis consectetur ducimus doloribus adipisci natus error, reprehenderit laudantium, ratione molestiae!</p>
+					<div class="about__social">
+						<a href="https://twitter.com/danamanoli"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.linkedin.com/in/dana-manoli-a8b2884b/"><i class="fa fa-linkedin"></i></a>
+						<a href="https://github.com/astronautfood"><i class="fa fa-github-alt"></i></a>
+					</div>
+				</div>
+				<img src="public/assets/dana.jpg" alt="" class="about__my-picture">
+			</div>	
 		</div>
 	</section>
 	<!--====  End of About Section  ====-->
@@ -55,7 +72,7 @@
 	=            Skills Section           =
 	======================================-->
 	
-	<section class="skills">
+	<section class="skills" id="skills">
 		<div class="wrapper">
 			<ul class="skills__display">
 				<li>
@@ -82,7 +99,7 @@
 					<i class="devicon-react-original devicon"></i> 
 					<h4>REACT</h4>
 				<li>
-					<img src="dev/assets/firebaseIcon.svg" alt="">
+					<img src="public/assets/firebaseIcon.svg" alt="">
 					<h4>FIREBASE</h4>
 				</li>
 				<li>
@@ -105,102 +122,84 @@
 	<!--=======================================
 	=            Featured Projects            =
 	========================================-->
-	<section class="projects">
+	<section class="projects" id="projects">
 		<div class="wrapper">
 			<h2 class="projects__intro">Projects</h2>
 			<ul class="projects__display">
 				<li>
 					<div class="project__container-left">
-						<img src="dev/assets/Breakfast247-APIProject.png" alt="" class="project__img--left">
+						<img src="public/assets/Breakfast247-APIProject.png" alt="" class="project__img--left">
 						<div class="project__info--left">
 							<h2 class="project__title left">Breakfast 24/ 7</h2>
 							<h4 class="project__sub-title">API Web Application</h4>
 							<p class="project__description">Powered by Zomato's API and Leaflet, this web application is designed to show users where they can get Breakfast at any time of day.</p>
-							<ul class="project__languages">
-								<li>Javascript</li>
-								<li>Jquery</li>
-								<li>HTML5</li>
-								<li>CSS3</li>
-								<li>SASS</li>
-								<li>Responsive</li>
+							<ul class="project__details">
+								<li>JavaScript</li>
+								<li>jQuery</li>
+								<a href="#" class="project__link">View Live</a>
 							</ul>
 						</div>
 					</div>
-					<h4 class="project__link"><a href="#">View Live</a></h4>
 				</li>
 				<li>	
 					<div class="project__container-right">
-						<img src="dev/assets/Topify-GroupAPIProject.png" alt="" class="project__img--right whi">
+						<img src="public/assets/Topify-GroupAPIProject.png" alt="" class="project__img--right whi">
 						<div class="project__info--right">
 							<h2 class="project__title right">Topify</h2>
 							<h4 class="project__sub-title">API Web Application</h4>
 							<p class="project__description">A web application using the Spotify API. Built as a 'Netflix' style catalogue that dynamically displays today's top 50 tracks.</p>
-							<ul class="project__languages">
-								<li>Javascript</li>
-								<li>Jquery</li>
-								<li>HTML5</li>
-								<li>CSS3</li>
-								<li>SASS</li>
-								<li>Responsive</li>
+							<ul class="project__details">
+								<li>JavaScript</li>
+								<li>jQuery</li>
+								<a href="#" class="project__link">View Live</a>
 							</ul>
 						</div>
 					</div>
-					<h4 class="project__link"><a href="#"></a>View Live</h4>
 				</li>
 				<li>	
 					<div class="project__container-left">
-						<img src="dev/assets/H2Grow-ReactProject.png" alt="" class="project__img--left">
+						<img src="public/assets/H2Grow-ReactProject.png" alt="" class="project__img--left">
 						<div class="project__info--left">
 							<h2 class="project__title left">H2Grow</h2>
 							<h4 class="project__sub-title">React Web Application</h4>
 							<p class="project__description">A React web application that stores information using Firebase and tells you when to water their plants next.</p>
-							<ul class="project__languages">
+							<ul class="project__details">
 								<li>React</li>
 								<li>Firebase</li>
-								<li>HTML5</li>
-								<li>CSS3</li>
-								<li>SASS</li>
-								<li>Responsive</li>
+								<a href="#" class="project__link">View Live</a>
 							</ul>
-							<h4 class="project__link"><a href="#">View Live</a></h4>
 						</div>
 					</div>
 				</li>
 				<li>	
 					<div class="project__container-right">
-						<img src="dev/assets/Quiz-JSProject.png" alt="" class="project__img--right">
+						<img src="public/assets/Quiz-JSProject.png" alt="" class="project__img--right">
 						<div class="project__info--right">
 							<h2 class="project__title right">Cocktail Quiz</h2>
 							<h4 class="project__sub-title">jQuery Interactive Site</h4>
 							<p class="project__description">An interactive quiz determines what type of cocktail you would be based on answers to a series of questions.</p>
-							<ul class="project__languages">
+							<ul class="project__details">
 								<li>Javascript</li>
 								<li>Jquery</li>
-								<li>HTML5</li>
-								<li>CSS3</li>
-								<li>SASS</li>
-								<li>Responsive</li>
+								<a href="#" class="project__link">View Live</a>
 							</ul>
 						</div>
 					</div>
-					<h4 class="project__link"><a href="#">View Live</a></h4>
 				</li>
 				<li>	
 					<div class="project__container-left">
-						<img src="dev/assets/Elrumi-HTML-CSSProject.png" alt="" class="project__img--left">
+						<img src="./public/assets/Elrumi-HTML-CSSProject.png" alt="" class="project__img--left">
 						<div class="project__info--left">
 							<h2 class="project__title left">Elrumi Creative</h2>
 							<h4 class="project__sub-title">PSD to Responsive Website</h4>
 							<p class="project__description">A fully responsive website created from a PSD Mockup</p>
-							<ul class="project__languages last">
+							<ul class="project__details">
 								<li>HTML5</li>
 								<li>CSS3</li>
-								<li>SASS</li>
-								<li>Responsive</li>
+								<a href="#" class="project__link">View Live</a>
 							</ul>
 						</div>
 					</div>
-					<h4 class="project__link"><a href="#">View Live</a></h4>
 				</li>
 			</ul>
 		</div>
@@ -210,7 +209,7 @@
 	<!--==================================
 	=            Form Section            =
 	===================================-->
-	<section class="contact">
+	<section class="contact" id="contact">
 		<div class="wrapper">
 			<h2 class="form__intro">Get in Touch</h2>
 			
@@ -219,13 +218,13 @@
 					<h3 class="contact__title">Let's Work Together!</h3>
 					<p class="contact__about--short">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam necessitatibus eius esse nam repudiandae earum autem, eveniet sed culpa suscipit commodi ipsam dolorem architecto similique repellat tenetur officia.</p>
 					<h4 class="my-email">dmanoli1@gmail.com</h4>
-					<figure role="social-icons">
-						<img src="" alt="">
-						<img src="" alt="">
-						<img src="" alt="">
-					</figure>
+					<div class="about__social">
+						<a href="https://twitter.com/danamanoli"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.linkedin.com/in/dana-manoli-a8b2884b/"><i class="fa fa-linkedin"></i></a>
+						<a href="https://github.com/astronautfood"><i class="fa fa-github-alt"></i></a>
+					</div>
 				</div>
-				<div class="form__container">
+				<form action="http://www.focuspocus.io/magic/dmanoli1@gmail.com" method="POST">
 					<div class="form__inner-container">
 						<input type="text" name="userName" placeholder="Name" class="name" required="true">
 						<input type="email" name="userEmail" placeholder="Email" class="email" required="true">
@@ -233,7 +232,7 @@
 					<input type="text" name="subject" placeholder="Subject" class="subject" required="false">
 					<textarea cols="40" rows="8" name="message" placeholder="Message" class="message" required="true"></textarea>
 					<button class="form__message-button">Send Message</button>
-				</div>
+				</form>
 			</div>
 		</div>
 	</section>
@@ -245,13 +244,9 @@
 	<footer>
 		<div class="wrapper">
 			<p> &copy; Dana Manoli 2017</p>
-			<figure role="social-icons">
-				<img src="" alt="">
-				<img src="" alt="">
-				<img src="" alt="">
-			</figure>
 		</div>
 	</footer>
-
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="dev/scripts/script.js"></script>
 </body>
 </html>

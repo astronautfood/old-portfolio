@@ -4,7 +4,8 @@
 }
 
 .form__intro {
-	@include sectionHeading(30px);
+	@include sectionHeading(28px);
+	text-transform: uppercase;
 	text-align: center;
 	padding: 90px 0 65px;
 	position: relative;
@@ -49,7 +50,7 @@
 // }
 
 .my-email {
-	margin: 75px 0 15px;
+	margin: 70px 0 15px;
 	border: 2px solid $bl;
 	padding: 15px;
 	text-align: center;
@@ -57,10 +58,13 @@
 	@include body(18px);
 }
 
-.form__container {
+form {
 	display: flex;
 	flex-direction: column;
 	width: 55%;
+	@include respond_to(medium) {
+		justify-content: center;
+	}
 }
 
 .form__inner-container {

@@ -14,7 +14,7 @@
 	display: block;
 	position: absolute;
 	top: 40%;
-	left: -25%;
+	left: -28%;
 	// transform: tranlateX(50%);
 	border-top: 1px solid $wh;
 	border-left: 1px solid $wh;
@@ -34,19 +34,97 @@ header {
 .header__wrapper {
 	display: flex;
 	justify-content: space-between;
+	height: 65px;
+	max-height: 65px;
 }
 
 .nav__items {
-	width: 400px;
+	width: 450px;
 	display: flex;
 	justify-content: space-between;
 	@include body(14px);
-	 text-transform: uppercase;
+		text-transform: uppercase;
 	a {
 		color: $wh;
 		letter-spacing: 2px;
+		border-bottom: 2px solid transparent;
+		width: 0%;
+		transition: 0.5s ease-in-out;
+		white-space: nowrap;
+
+		&:hover {
+			border-bottom: 2px solid $wh;
+			width: 100%;
+		}
 	}
 }
 
+.nav__items {
+	display: flex;
+	// flex-direction: 
+	@include respond_to(medium) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		display: none;
+	}
+}
+
+nav {
+	position: relative;
+}
+
+nav button.hamburger {
+	display: none;	
+	outline: none;
+	@include respond_to(medium) {
+		position: absolute;
+		top: 25%;
+		right:5%;
+		display: block;
+
+	}
+}
+
+
+.overlay nav {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.overlay.nav__items {
+	flex-direction: column;
+}
+
+.overlay .nav__items a {
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+}
+
+.overlay .hamburger {
+	display: block;
+	font-size: 50px;
+	text-align: center;
+}
+
+// .hamburger {
+// 	@include respond-to(medium) {
+// 		display: block;
+// 	}
+// 	@include respond_to(small) {
+// 		display: block;
+// 	}
+// }
+
+.nav__items.show {
+	display: flex;
+	background: $bl;
+	padding: 20px;
+}
 
 

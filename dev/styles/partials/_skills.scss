@@ -13,6 +13,9 @@
 .skills__display li {
 	width: 20%;
 	padding: 0 40px 60px 40px;
+	@include respond_to(medium) {
+		margin: 30px;
+	}
 	.devicon {
 		text-align: center;
 		color: $wh;
@@ -24,12 +27,14 @@
 
 .skills__display img {
 	width: 80px;
+	min-width: 80px;
 	height: 80px;
 	margin: 0 auto;
 }
 
 .skills__display h4 {
-	width: 100%;
+	width: 80px;
+	margin: 0 auto;	
 	@include body(14px);
 	letter-spacing: 2px;
 	text-align: center;

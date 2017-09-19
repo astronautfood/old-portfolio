@@ -1,11 +1,31 @@
 footer {
 	background: $bl;
-	padding: 75px 0;
+	padding: 60px 0;
 	p {
 		color: $wh;
-		@include sectionSubHeading(20px);
-		letter-spacing: 3px;
+		@include body(20px);
+		letter-spacing: 2px;
 		text-align: center;
 	}
 }
+
+// .footer__social {
+// 	width: 120px;
+// 	display: flex;
+// 	justify-content: space-between;
+// 	font-size: 20px;
+// 	padding-bottom: 110px;
+// 	a {
+// 		color: $wh;
+// 	}	
+// }
+
+// .fa-footer {
+// 	margin: 10px;
+// 	// border: 3px solid $wh;
+// 	padding: 8px 10px;
+// 	border-radius: 50%;
+// 	&:first-child {
+// 		margin-left: 0;
+// }
 
