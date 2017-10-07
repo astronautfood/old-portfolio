@@ -1,6 +1,10 @@
 .contact {
-	background: #E8E8EE;
-	padding-bottom: 100px;
+	border-top: 2px solid #CCC;
+	box-shadow: 1px 0px 2px #333;
+	background: url("/../public/assets/white_brick_wall_@2X.png");
+	@include respond_to(medium) {
+		padding-bottom: 50px;
+	}
 }
 
 .form__intro {
@@ -19,6 +23,9 @@
 .contact__container {
 	display: flex;
 	justify-content: space-between;
+	@include respond_to(medium) {
+		flex-direction: column;
+	}
 }
 
 .contact__container--left {
@@ -28,7 +35,11 @@
 	justify-content: space-between;
 	position: relative;
 	padding-right: 50px;
-	border-right: 3px solid #CCC;
+	@include respond_to(medium) {
+		width: 100%;
+		align-items: center;
+		padding: 0 10px;
+	}
 	.contact__title {
 		margin: 5px 0 50px;
 		@include sectionHeading(20px);
@@ -39,23 +50,30 @@
 	line-height: 30px;
 }
 
-// aside::after {
-// 	content: "";
-// 	width: 300px;
-// 	// height: 300px;
-// 	position: absolute;
-// 	top: 50%;
-// 	left: 50%;
-// 	border: 2px solid #CCC;
-// }
-
 .my-email {
 	margin: 70px 0 15px;
 	border: 2px solid $bl;
-	padding: 15px;
+	padding: 15px 15px 15px 30px;
 	text-align: center;
 	width: 200px;
-	@include body(18px);
+	@include body(14px);
+	@include respond_to(medium) {
+		width: 150px;
+		font-size: 12px;
+		padding: 5px;
+		text-align: center;
+	}
+}
+
+.contact__social {
+	width: 120px;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	padding-bottom: 110px;
+	@include respond_to(medium) {
+		justify-content: center;
+	}
 }
 
 form {
@@ -64,17 +82,32 @@ form {
 	width: 55%;
 	@include respond_to(medium) {
 		justify-content: center;
+		width: 100%;
+		align-items: center;
+		padding: 0 10px;
 	}
 }
 
 .form__inner-container {
 	display: flex;
+	@include respond_to(medium) {
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+	}
 }
 
 .name,
 .email {
 	width: 50%;
 	padding: 10px;
+	@include respond_to(medium) {
+		width: 100%;
+		margin-top: 20px;
+	}
+	@include respond_to(medium) {
+		padding-bottom: 15px;
+	}
 }
 
 .name {
@@ -84,6 +117,12 @@ form {
 .subject {
 	padding: 10px;
 	margin-top: 15px;
+	@include respond_to(medium) {
+		width: 100%;
+	}
+	@include respond_to(medium) {
+		padding-bottom: 15px;
+	}
 }
 
 
@@ -91,32 +130,36 @@ form {
 	height: auto;
 	padding: 10px;
 	margin-top: 15px;
+	border: 3px solid #CCC;
 	&:focus {
 		outline: none;
-		border: 3px solid #CCC;
-		background: #E8E8EE;
+		border: 3px solid #409850;
+	}
+	@include respond_to(medium) {
+		padding-bottom: 15px;
 	}
 }
 
 input {
-	border: 3px solid $wh;
+	border: 3px solid #CCC;
 }
 
 input::placeholder,
 .message::placeholder  {
 	@include body(16);
 	color: $bl;
-	// text-transform: uppercase;
 }
 
 input:focus {
 	outline: none;
-	border: 3px solid #CCC;
-	background: #E8E8EE;
+	border: 3px solid #409850;
 }
 
 textarea {
 	border: none;
+	@include respond_to(medium) {
+		width: 100%;
+	}
 } 
 
 .form__message-button {
@@ -126,6 +169,20 @@ textarea {
 	@include body(16px);
 	text-align: center;
 	text-transform: uppercase;
+	border: 3px solid transparent;
+	background: $bl;
+	transition: 0.3s ease-in-out;
+	a {
+		color: $wh;
+	}
+	@include respond_to(medium) {
+		margin-top: 30px;
+	}
+}
+
+.form__message-button:hover {
+	background: #409850;
+	border: 3px solid $wh;
 }
 
 

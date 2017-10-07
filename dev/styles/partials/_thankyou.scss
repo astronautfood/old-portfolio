@@ -1,0 +1,35 @@
+.thanks__container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1.thanks__title {
+	text-align: center;
+	@include sectionHeading(60px);
+	color: $bl;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+h2.thanks__notice {
+	@include body(45px);
+	color: $bl;
+	text-align: center;
+	margin: 100px 0;
+}
+
+.thanks__return {
+	display: flex;
+	margin: 0 auto;
+	padding: 15px;
+	@include body(16px);
+	a {
+		@include body(35px);
+		color: $bl;
+		text-align: center;
+		margin: 0 auto;
+	}
+}

@@ -1,18 +1,16 @@
 .hero-section {
-	background: url(/dev/assets/samuel-zeller-337030.jpg);
+	background: url("/../public/assets/igor-son-320878.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	// background-position-x: center;
+	background-position-y: 45%;
+	background-attachment: fixed;
 	height: 100vh;
 	position: relative;
-	&::after {
-		content: "";
-		position: absolute;
-		background: rgba(10, 10, 10, 0.5);
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	@include respond_to(medium) {
+		background-attachment: scroll;
 	}
 }
 
@@ -22,21 +20,21 @@
 	text-align: center;
 	color: $bl;
 	text-transform: uppercase;
-	background: #F4F5F7;
-	border: 3px solid $bl;
-	padding: 5px;
-	z-index: 10;
 	position: absolute;
 	top:50%;
-	left: 50%;
+	left: 30%;
 	transform:translate(-50%, -50%);
+	@include respond_to(medium) {
+		padding-left: 35px;
+	}
 
 .hero__title--name {
 		@include sectionHeading(60px);
-		letter-spacing: 5px;
+		letter-spacing: 3px;
 		@include respond_to(medium) {
 			font-size: 45px;
-			letter-spacing: 3px;
+			letter-spacing: 2px;
+			padding-left: 35px;
 		}
 	}
 
@@ -45,8 +43,9 @@
 		letter-spacing: 4px;
 		text-align: center;
 		@include respond_to(medium) {
-			font-size: 25px;
-			letter-spacing: 2px;
+		font-size: 25px;
+		letter-spacing: 2px;
+		padding-left: 35px;	
 		}
 	}
 }
