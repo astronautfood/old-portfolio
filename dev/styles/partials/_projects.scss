@@ -98,9 +98,14 @@
 	justify-content: space-around;
 	padding-left: 30px;
 	@include respond_to(medium) {
-			align-items: center;
-			padding-left: 0;
-		}
+		align-items: center;
+		padding-left: 0;
+	}
+	
+	@include respond_to(small) {
+		width: 100%;
+	}
+
 	}
 }
 
@@ -337,7 +342,9 @@
 			padding: 10px 12px 32px;
 		}
 		@include respond_to(small) {
-			margin-top: 20px;
+			display: none;
+			width: 100%;
+			margin: 0 auto;
 		}
 	}
 }
@@ -345,6 +352,10 @@
 .project__details--htw {
 	width: 400px;
 	margin: 0 auto;
+
+	@include respond_to(small) {
+		width: 100%;
+	}
 }
 
 .project__details--univers {
@@ -373,7 +384,8 @@
 			padding-bottom: 25px;
 	}
 	@include respond_to(small) {
-			margin-top: 20px;
+			// margin-top: 20px;
+			margin: 0 auto;
 	}
 	&:hover {
 		background-color: $bl;

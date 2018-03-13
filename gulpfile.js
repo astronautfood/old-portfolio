@@ -18,22 +18,22 @@ gulp.task('styles', () => {
 		.pipe(gulp.dest('./public/styles'))
 });
 
-// gulp.task('js', () => {
-// 	return browserify('dev/scripts/app.js', {debug: true})
-// 		.transform('babelify', {
-// 			sourceMaps: true,
-// 			presets: ['es2015','react']
-// 		})
-// 		.bundle()
-// 		.on('error',notify.onError({
-// 			message: "Error: <%= error.message %>",
-// 			title: 'Error in JS 💀'
-// 		}))
-// 		.pipe(source('app.js'))
-// 		.pipe(buffer())
-// 		.pipe(gulp.dest('public/scripts'))
-// 		.pipe(reload({stream:true}));
-// });
+gulp.task('scripts', () => {
+	return browserify('dev/scripts/app.js', {debug: true})
+		.transform('babelify', {
+			sourceMaps: true,
+			presets: ['es2015','react']
+		})
+		.bundle()
+		.on('error',notify.onError({
+			message: "Error: <%= error.message %>",
+			title: 'Error in JS 💀'
+		}))
+		.pipe(source('script.js'))
+		.pipe(buffer())
+		.pipe(gulp.dest('public/scripts'))
+		.pipe(reload({stream:true}));
+});
 
 gulp.task('assets', () => {
   // return gulp.src('./dev/assets/**/*')
@@ -64,8 +64,8 @@ gulp.task('bs', () => {
 	});
 });
 
-gulp.task('default', ['bs','styles', 'assets'], () => {
-	// gulp.watch('dev/**/*.js',['js']);
+gulp.task('default', ['bs','styles', 'assets', 'scripts'], () => {
+	gulp.watch('dev/**/*.js',['scripts']);
 	gulp.watch('dev/**/*.scss',['styles']);
 	gulp.watch('./dev/assets/**/*',['assets']);
 	gulp.watch('./public/styles/style.css',reload);
