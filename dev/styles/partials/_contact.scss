@@ -1,7 +1,7 @@
 .contact {
 	border-top: 2px solid #CCC;
 	box-shadow: 1px 0px 2px #333;
-	background: url("/../public/assets/white_brick_wall_@2X.png");
+	background: url("/../dist/assets/white_brick_wall_@2X.png");
 	@include respond_to(medium) {
 		padding-bottom: 50px;
 	}
