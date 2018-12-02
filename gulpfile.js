@@ -31,7 +31,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('assets', () => {
-	return gulp.src('dev/assets/**/*.+(png|jpg|gif|svg)')
+	return gulp.src('dev/assets/**/*.+(png|jpg|jpeg|gif|svg)')
 		.pipe(cache(imagemin([
 			imagemin.gifsicle({ interlaced: true }),
 			imagemin.jpegtran({ progressive: true }),
