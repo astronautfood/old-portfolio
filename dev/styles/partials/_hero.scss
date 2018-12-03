@@ -1,51 +1,49 @@
-.hero-section {
+.hero {
 	background: url("/../dist/assets/igor-son-320878.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: calc(100vh - 75px);
 	background-position-y: 45%;
 	background-attachment: fixed;
-	height: 100vh;
-	position: relative;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	@include respond_to(medium) {
 		background-attachment: scroll;
 	}
-}
-
-.hero__title {
-	max-width: 600px;
-	width: 80%;
-	text-align: center;
-	color: $bl;
-	text-transform: uppercase;
-	position: absolute;
-	top:50%;
-	left: 30%;
-	transform:translate(-50%, -50%);
-	@include respond_to(medium) {
-		padding-left: 35px;
+	
+	&__wrapper {
+		display: grid;
+		grid-template-columns: minmax(300px, 1fr) 1fr;
+		height: calc(100vh - 75px);
+		align-items: center;
+		justify-items: center;
 	}
 
-.hero__title--name {
-		@include sectionHeading(60px);
-		letter-spacing: 3px;
-		@include respond_to(medium) {
-			font-size: 45px;
-			letter-spacing: 2px;
-			padding-left: 35px;
-		}
-	}
-
-.hero__title--career {
-		@include body(25px);
-		letter-spacing: 4px;
+	&__title {
 		text-align: center;
-		@include respond_to(medium) {
-		font-size: 25px;
-		letter-spacing: 2px;
-		padding-left: 35px;	
+		color: $bl;
+		text-transform: uppercase;
+
+		&--name {
+			@include sectionHeading(60px);
+			letter-spacing: 3px;
+
+			@include respond_to(medium) {
+				font-size: 45px;
+				letter-spacing: 2px;
+			}	
+		}
+
+		&--career {
+			@include body(25px);
+			letter-spacing: 4px;
+			text-align: center;
+
+			@include respond_to(medium) {
+				font-size: 25px;
+				letter-spacing: 2px;
+			}
 		}
 	}
 }
