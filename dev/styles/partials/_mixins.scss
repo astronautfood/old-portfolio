@@ -1,28 +1,12 @@
 @mixin sectionHeading($fontValue) {
 	font-family: $headingFont;
 	font-size: $fontValue;
-	letter-spacing: 1.4px;
-}
-
-@mixin sectionSubHeading($fontValue) {
-	font-family: $subHeadingFont;
-	font-size: $fontValue;
-	letter-spacing: 1.4px;
 }
 
 @mixin body($fontValue) {
 	font-family: $bodyFont;
 	font-size: $fontValue;
 	line-height: 30px;
-}
-
-@mixin keyline {
-	content: "";
-	width: 100px;
-	position: absolute;
-	top: 70%;
-	left: 0;
-	border-bottom: 4px solid $bl;
 }
 
 @mixin respond_to($breakpoint) {

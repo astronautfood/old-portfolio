@@ -1,51 +1,326 @@
-.hero {
-	background: url("/../dist/assets/igor-son-320878.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: calc(100vh - 75px);
-	background-position-y: 45%;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	@include respond_to(medium) {
-		background-attachment: scroll;
-	}
+// .hero {
+// 	// // background: url("/../dist/assets/igor-son-320878.jpg");
+// 	// background-size: cover;
+// 	// background-repeat: no-repeat;
+// 	// height: calc(100vh - 75px);
+// 	// background-position-y: 45%;
+// 	// background-attachment: fixed;
+// 	// -webkit-background-size: cover;
+// 	// -moz-background-size: cover;
+// 	// -o-background-size: cover;
+// 	background-color: #000;
+// 	@include respond_to(medium) {
+// 		background-attachment: scroll;
+// 	}
 	
-	&__wrapper {
-		display: grid;
-		grid-template-columns: minmax(300px, 1fr) 1fr;
-		height: calc(100vh - 75px);
-		align-items: center;
-		justify-items: center;
-	}
+// 	&__wrapper {
+// 		display: grid;
+// 		grid-template-columns: 1fr;
+// 		height: calc(100vh - 75px);
+// 		align-items: center;
+// 		justify-items: center;
+// 	}
 
-	&__title {
-		text-align: center;
-		color: $bl;
-		text-transform: uppercase;
+// 	&__title {
+// 		font-family: "Dosis", sans-serif;
+// 		text-align: center;
+// 		color: $bl;
+// 		text-transform: uppercase;
+// 		text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 
-		&--name {
-			@include sectionHeading(60px);
-			letter-spacing: 3px;
+// 		&--name {
+// 			@include sectionHeading(7rem);
+// 			letter-spacing: 3px;
 
-			@include respond_to(medium) {
-				font-size: 45px;
-				letter-spacing: 2px;
-			}	
+// 			@include respond_to(medium) {
+// 				font-size: 45px;
+// 				letter-spacing: 2px;
+// 			}	
+// 		}
+
+// 		&--career {
+// 			@include body(2.5rem);
+// 			font-size: 25px;
+// 			letter-spacing: 4px;
+// 			text-align: center;
+
+// 			@include respond_to(medium) {
+// 				font-size: 25px;
+// 				letter-spacing: 2px;
+// 			}
+// 		}
+// 	}
+// }
+
+.hero {
+	background-image: linear-gradient(to bottom, #F0FFFF, #fff) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh; 
+	text-align: center;
+	color: $bl;
+	text-transform: uppercase;
+	// background-position: -100px 0;
+	// padding-top: calc(50vh - 215px);
+	padding-top: 30vh;
+
+	&__my-name {
+		@include sectionHeading(5rem);
+		letter-spacing: 2px;
+		position: relative;
+		z-index: 40;
+		margin-top: 60px;
+
+		@include respond_to(medium) {
+			font-size: 45px;
+			padding: 0 20px
 		}
 
-		&--career {
-			@include body(25px);
-			letter-spacing: 4px;
-			text-align: center;
+		@include respond_to(small) {
+			font-size: 4rem;
+		}
 
-			@include respond_to(medium) {
-				font-size: 25px;
-				letter-spacing: 2px;
+		@keyframes fakeFadeAccent {
+			from {border-color: transparent; transform: translateX(-50%) rotate(135deg)}
+			to {border-color: $primary; transform: translateX(-50%) rotate(0deg)}
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 200px;
+			height: 200px;
+			border: 3px solid $primary;
+			border-radius: 4px;
+			position: absolute;
+			top: -262px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: -1;
+			animation-name: fakeFadeAccent;
+			animation-duration: 3s;
+
+			@media screen and (max-width: 388px) {
+				width: 150px;
+				height: 150px;
+				top: -220px;
 			}
+		}
+	}
+
+
+	&__my-career {
+		@include body(2.5rem);
+		font-family: 'Varela Round', sans-serif;
+		font-size: 25px;
+		letter-spacing: 3px;
+		text-align: center;
+		margin-top: 10px;
+		position: relative;
+		z-index: 30;
+		margin-bottom: 40px;
+
+		@keyframes fakeFade {
+			from {border-color: transparent;}
+			to {border-color: #898989;}
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 200px;
+			height: 200px;
+			border: 3px solid #898989;
+			border-radius: 4px;
+			position: absolute;
+			top: -330px;
+			left: 39%;
+			transform: rotate(135deg);
+			z-index: -1;
+			animation-name: fakeFade;
+			animation-duration: 3s;
+
+			@media screen and (max-width: 970px) {
+				left: 38%;
+			}
+
+			@media screen and (max-width: 865px) {
+				left: 37%;
+			}
+
+			@media screen and (max-width: 785px) {
+				left: 35%;
+			}
+
+			@media screen and (max-width: 710px) {
+				left: 34%;
+			}
+
+			@media screen and (max-width: 710px) {
+				top: -325px;
+			}
+
+			@media screen and (max-width: 675px) {
+				left: 32%;
+			}
+
+			@media screen and (max-width: 620px) {
+				left: 31%;
+			}
+
+			@media screen and (max-width: 560px) {
+				left: 30%;
+			}
+
+			@media screen and (max-width: 525px) {
+				left: 28%;
+			}
+
+			@media screen and (max-width: 490px) {
+				left: 27%;
+			}
+
+			@media screen and (max-width: 455px) {
+				left: 25%;
+			}
+
+			@media screen and (max-width: 415px) {
+				left: 23%;
+			}
+
+			@media screen and (max-width: 390px) {
+				left: 21%;
+			}
+
+			@media screen and (max-width: 388px) {
+				top: -275px;
+				width: 150px;
+				height: 150px;
+				left: 27%;
+			}
+
+			@media screen and (max-width: 361px) {
+				top: -325px;
+			}
+
+			@media screen and (max-width: 345px) {
+				left: 25%;
+			}
+
+			@media screen and (max-width: 320px) {
+				left: 23%;
+			}
+
+			@media screen and (max-width: 300px) {
+				left: 21%;
+			}
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 200px;
+			height: 200px;
+			border: 3px solid #898989;
+			border-radius: 4px;
+			position: absolute;
+			top: -330px;
+			left: 41%;
+			transform: rotate(135deg);
+			z-index: -1;
+			animation-name: fakeFade;
+			animation-duration: 3s;
+
+			@media screen and (max-width: 970px) {
+				left: 40%;
+			}
+
+			@media screen and (max-width: 865px) {
+				left: 39%;
+			}
+
+			@media screen and (max-width: 785px) {
+				left: 37%;
+			}
+
+			@media screen and (max-width: 710px) {
+				left: 36%;
+				top: -325px;
+			}
+
+			@media screen and (max-width: 675px) {
+				left: 35%;
+			}
+
+			@media screen and (max-width: 620px) {
+				// left: 34%;
+			}
+
+			@media screen and (max-width: 560px) {
+				left: 33%;
+			}
+
+			@media screen and (max-width: 525px) {
+				left: 32%;
+			}
+
+			@media screen and (max-width: 490px) {
+				left: 30%;
+			}
+
+			@media screen and (max-width: 455px) {
+				left: 29%;
+			}
+
+			@media screen and (max-width: 415px) {
+				left: 27%;
+			}
+
+			@media screen and (max-width: 390px) {
+				left: 25%;
+			}
+
+			@media screen and (max-width: 388px) {
+				top: -275px;
+				width: 150px;
+				height: 150px;
+				left: 32%;
+			}
+
+			@media screen and (max-width: 361px) {
+				top: -325px;
+			}
+
+			@media screen and (max-width: 345px) {
+				left: 30%;
+			}
+
+			@media screen and (max-width: 320px) {
+				left: 28%;
+			}
+
+			@media screen and (max-width: 300px) {
+				left: 26%;
+			}
+		}
+
+		@include respond_to(medium) {
+			font-size: 2.5rem;
+			padding: 0 20px;
+		}
+
+		@include respond_to(small) {
+			font-size: 2rem;
 		}
 	}
 }
 
+svg {
+	width: 150px;
+	display: block;
+	margin: 35px auto 40px;
 
+	@media screen and (max-width: 388px) {
+		width: 100px;
+	}
+}

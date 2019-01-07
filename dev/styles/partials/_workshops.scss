@@ -1,0 +1,86 @@
+.workshops {
+    color: $wh;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+    
+    &::before {
+        content: '';
+        background-color: $bl;
+        transform: rotate(-5deg);
+        position: absolute;
+        width: 200%;
+        height: 80%;
+        top: 8%;
+        left: -50%;
+    }
+
+    @media screen and (max-width: 775px) {
+        height: 1100px;
+    }
+
+
+    &__title {
+        @include sectionHeading(2rem);
+        text-transform: uppercase;
+        position: relative;
+        padding: 85px 0 0 30px;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 775px) {
+            text-align: center;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px;
+        align-items: center;
+
+        @media screen and (max-width: 775px) {
+            grid-template-columns: 1fr;
+            grid-gap: 60px;
+        }
+    }    
+
+    &__info {
+        @include body(1.8rem);
+        margin-bottom: 25px;
+        padding-left: 30px;
+
+        @media screen and (max-width: 775px) {
+            text-align: center;
+            padding: 0 30px;
+        }
+
+        p:last-of-type {
+            margin-top: 25px;
+        }
+
+        a {
+            color: $wh;
+
+            &:hover {
+                color: blue;
+            }
+        }
+
+        &--questions__email {
+            font-weight: 700;
+        }
+    }
+
+    &__poster {
+        min-width: 350px;
+        padding-right: 30px;
+
+        @media screen and (max-width: 775px) {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+    }
+}
