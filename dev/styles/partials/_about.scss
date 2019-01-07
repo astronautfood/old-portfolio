@@ -49,8 +49,6 @@
 			background-color: #898989;
 			z-index: 1;
 		}
-		// border: 3px solid $bl;
-		// box-shadow: -10px 10px $bl;
 
 		@media screen and (max-width: 650px) {
 			grid-column: 1 / -1;
@@ -79,6 +77,10 @@
 		text-align: left;
 		line-height: 24px;
 		padding-bottom: 10px;
+
+		a {
+			display: inline-block;
+		}
 
 		@media screen and (max-width: 775px) {
 			text-align: center;
