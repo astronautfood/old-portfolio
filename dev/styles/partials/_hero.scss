@@ -9,6 +9,7 @@
 	padding-top: 30vh;
 
 	&__svg-wrapper {
+		position: relative;
 		@keyframes fakeFade {
 			from {border-color: transparent;}
 			to {border-color: #898989;}
@@ -22,9 +23,9 @@
 			border: 3px solid #898989;
 			border-radius: 4px;
 			position: absolute;
-			top: 190px;
+			top: 50%;
 			left: 51%;
-			transform: translateX(-50%) rotate(135deg);
+			transform: translateY(-50%) translateX(-50%) rotate(135deg);
 			z-index: 1;
 			animation-name: fakeFade;
 			animation-duration: 3s;
@@ -48,9 +49,9 @@
 			border: 3px solid #898989;
 			border-radius: 4px;
 			position: absolute;
-			top: 190px;
+			top: 50%;
 			left: 49%;
-			transform: translateX(-50%) rotate(135deg);
+			transform: translateY(-50%) translateX(-50%) rotate(135deg);
 			z-index: 1;
 			animation-name: fakeFade;
 			animation-duration: 3s;
