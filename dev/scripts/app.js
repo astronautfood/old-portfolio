@@ -17,15 +17,13 @@ anime({
 
 $(window).on('scroll', function(){
 	if ( !$(document).scrollTop()){
-	$('header').css({ 'background-color': '#000' });
-		$(".header__list a").css({ color: '#03dac5' });
-	$(".header__mobile-menu .bar").removeClass('colour-change');
-		if($('body').hasClass('menu-open')) {
-			$(".header__list a").css({ color: "#03dac5" });
-		}
+		$(".header__mobile-menu .bar").removeClass('colour-change');
+		$('header').removeClass('background-change');
+			if($('body').hasClass('menu-open')) {
+				$(".header__list a").css({ color: "#03dac5" });
+			}
 	} else {
-		$("header").css({backgroundColor: 'rgba(3,218,197, 0.9)'});
-		$(".header__list a").css({ color: '#000' });
+		$("header").addClass("background-change");
 		$(".header__mobile-menu .bar").addClass('colour-change');
 		if($('body').hasClass('menu-open')) {
 			$(".header__list a").css({ color: "#03dac5" });
