@@ -34,6 +34,11 @@
         }
     }
 
+    &__none-upcoming {
+        font-size: 1.6rem;
+        max-width: 50%;
+    }
+
     &__wrapper {
         position: relative;
         display: grid;
