@@ -37,6 +37,12 @@
     &__none-upcoming {
         font-size: 1.6rem;
         max-width: 50%;
+
+        @media screen and (max-width: 775px) {
+            max-width: 70%;
+            margin: 20px auto 0;
+        }
+
     }
 
     &__wrapper {
