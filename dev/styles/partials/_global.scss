@@ -1,44 +1,63 @@
-
-
 html {
-	background-color: $bl;
-	font-size: 62.5%;
+  background-color: $bl;
+  font-size: 62.5%;
 }
 
 body {
-	background-color: $wh;
+  background-color: $wh;
 }
 
 .wrapper {
-	max-width: 100%;
-	display: grid;
-	grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
 
-	& > * {
-		grid-column: 2;
-	}
+  & > * {
+    grid-column: 2;
+  }
 }
 
-h1, h2, h3, h4, p {margin: 0;}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
 
 ul {
-	padding: 0;
-	li {
-		list-style-type: none;
-	}
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
 }
 
 img {
-	max-width: 100%;
-	display: block;
-	margin: 0;
+  max-width: 100%;
+  display: block;
+  margin: 0;
 }
 
 a {
-	display: block;
-	text-decoration: none;
-	color: $bl;
+  display: block;
+  text-decoration: none;
+  color: $bl;
 }
 
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
 
-
+.bold {
+  font-weight: 600;
+}

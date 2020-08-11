@@ -1,117 +1,122 @@
 .about-me {
-	background-image: (linear-gradient(#f2f4f7 70%,#fff));
+  background-image: (linear-gradient(#f2f4f7 70%, #fff));
 
-	&__content {
-		display: grid;
-		grid-template-columns: minmax(100px, 1fr) 1fr;
-		grid-gap: 100px;
-		align-items: center;
-		justify-items: center;
-		padding: 80px 0 90px;
+  &__content {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 1fr;
+    grid-gap: 100px;
+    align-items: center;
+    justify-items: center;
+    padding: 80px 0 90px;
 
-		@media screen and (max-width: 775px) {
-			grid-template-columns: 1fr;
-			grid-gap: 60px;
-			padding: 175px 0 45px;
-		}
-	}
+    @media screen and (max-width: 775px) {
+      grid-template-columns: 1fr;
+      grid-gap: 60px;
+      padding: 175px 0 45px;
+    }
+  }
 
-	&__img {
-		max-width: 225px;
-		width: 100%;
-		position: relative;
-		
-		img {
-			position: relative;
-			z-index: 20;
-		}
+  &__img {
+    max-width: 225px;
+    width: 100%;
+    position: relative;
 
-		&::before {
-			content: '';
-			width: 25px;
-			height: 240px;
-			display: block;
-			position: absolute;
-			top: 30px;
-			left: -40px;
-			background-color: $primary;
-			z-index: 10;
-		}
+    img {
+      position: relative;
+      z-index: 20;
+    }
 
-		&::after {
-			content: '';
-			width: 175px;
-			height: 275px;
-			display: block;
-			position: absolute;
-			top: -43px;
-			left: 100px;
-			background-color: #898989;
-			z-index: 1;
-		}
+    &::before {
+      content: "";
+      width: 25px;
+      height: 240px;
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: -40px;
+      background-color: $primary;
+      z-index: 10;
+    }
 
-		@media screen and (max-width: 650px) {
-			grid-column: 1 / -1;
-			justify-items: center;
-		}
-	}
+    &::after {
+      content: "";
+      width: 175px;
+      height: 275px;
+      display: block;
+      position: absolute;
+      top: -43px;
+      left: 100px;
+      background-color: #898989;
+      z-index: 1;
+    }
 
-	&__desc {
-		padding-right: 20px;
+    @media screen and (max-width: 650px) {
+      grid-column: 1 / -1;
+      justify-items: center;
+    }
+  }
 
-		@media screen and (max-width: 775px) {
-			padding: 0 30px;
-			text-align: center;
-		}
-	}
-	
-	&__title {
-		@include sectionHeading(28px);
-		text-transform: uppercase;
-		padding: 90px 0 40px;
-		position: relative;
-	}
-	
-	&__blurb {
-		@include body(1.8rem);
-		text-align: left;
-		line-height: 24px;
-		padding-bottom: 10px;
+  &__desc {
+    padding-right: 20px;
 
-		a {
-			display: inline-block;
-		}
+    @media screen and (max-width: 775px) {
+      padding: 0 30px;
+      text-align: center;
+    }
+  }
 
-		@media screen and (max-width: 775px) {
-			text-align: center;
-		}
-	}
+  &__title {
+    @include sectionHeading(28px);
+    text-transform: uppercase;
+    padding: 90px 0 40px;
+    position: relative;
+  }
 
-	&__social-wrapper {
-		display: grid;
-		grid-template-columns: repeat(3, 50px);
-		grid-gap: 10px;
+  &__blurb {
+    @include body(1.8rem);
+    text-align: left;
+    line-height: 24px;
+    padding-bottom: 10px;
 
-		@media screen and (max-width: 775px) {
-			justify-content: center;
-		}
-		
-		a {
-			justify-self: center;
-		}
+    a {
+      display: inline-block;
+    }
 
-		.fa {
-			margin: 10px;
-			// border: 3px solid $bl;
-			padding: 8px 10px;
-			border-radius: 50%;
-			transition: 0.4s ease-in-out;
-			font-size: 1.8rem;
-		
-			&:hover {
-				background: $bl;
-				color: $wh;
-			}
-		}
-	}
+    a.about-me__blurb--resume-link {
+      display: inline;
+      color: #4b0082;
+    }
+
+    @media screen and (max-width: 775px) {
+      text-align: center;
+    }
+  }
+
+  &__social-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-gap: 10px;
+
+    @media screen and (max-width: 775px) {
+      justify-content: center;
+    }
+
+    a {
+      justify-self: center;
+    }
+
+    .fa {
+      margin: 10px;
+      // border: 3px solid $bl;
+      padding: 8px 10px;
+      border-radius: 50%;
+      transition: 0.4s ease-in-out;
+      font-size: 1.8rem;
+
+      &:hover {
+        background: $bl;
+        color: $wh;
+      }
+    }
+  }
 }
